@@ -30,13 +30,13 @@ const Hero = () => {
             Análisis 100% gratuito • Sin compromiso • Expertos reales
           </div>
 
-          {/* Main Heading - Más directo y enfocado en ahorro */}
+          {/* Main Heading - Más atractivo sin cantidad específica */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight animate-fade-in">
-            Ahorra hasta <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">500€/año</span><br />
-            en tus facturas
+            <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">Ahorra dinero</span><br />
+            en todas tus facturas
           </h1>
 
-          {/* Subtitle más específico */}
+          {/* Subtítulo más específico */}
           <div className="mb-8 animate-fade-in">
             <p className="text-2xl md:text-3xl font-semibold text-emerald-700 mb-4">
               Te lo demostramos gratis
@@ -51,7 +51,7 @@ const Hero = () => {
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg border border-emerald-200">
               <div className="flex items-center gap-2">
                 <TrendingDown className="w-5 h-5 text-emerald-600" />
-                <span className="text-sm font-medium text-gray-700">Sin cambiar de compañía</span>
+                <span className="text-sm font-medium text-gray-700">Ahorro garantizado</span>
               </div>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg border border-emerald-200">

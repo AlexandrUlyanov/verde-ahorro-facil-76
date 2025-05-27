@@ -1,17 +1,11 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { TrendingDown, Shield, UserCheck, Zap, Clock, Euro } from "lucide-react";
+import { Shield, UserCheck, Zap, Clock, Euro, CheckCircle } from "lucide-react";
 
 const Benefits = () => {
   const benefits = [
     {
-      icon: TrendingDown,
-      title: "Ahorro sin cambios",
-      description: "Mantén tus servicios actuales pero paga menos cada mes",
-      color: "text-emerald-600 bg-emerald-100"
-    },
-    {
-      icon: Shield,
+      icon: CheckCircle,
       title: "100% gratuito",
       description: "Revisión completa sin compromiso ni costes ocultos",
       color: "text-green-600 bg-green-100"
@@ -39,6 +33,12 @@ const Benefits = () => {
       title: "Ahorro garantizado",
       description: "Solo cobramos si conseguimos mejorarte la tarifa",
       color: "text-teal-600 bg-teal-100"
+    },
+    {
+      icon: Shield,
+      title: "Máxima seguridad",
+      description: "Tus datos están protegidos y nunca los compartimos",
+      color: "text-emerald-600 bg-emerald-100"
     }
   ];
 
@@ -47,7 +47,7 @@ const Benefits = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            ¿Por qué elegir <span className="text-emerald-600">Verde Ahorro Fácil?</span>
+            ¿Por qué elegir <span className="text-emerald-600">entraYcompara?</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Somos expertos en encontrar la tarifa perfecta para ti, sin complicaciones
