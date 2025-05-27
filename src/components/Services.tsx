@@ -10,7 +10,7 @@ const Services = () => {
       description: "Wypo",
       color: "text-yellow-600 bg-yellow-100",
       savings: "Hasta 300€/año",
-      logo: "/lovable-uploads/0706301c-4ef6-45f1-b7c7-f30169b76a42.png"
+      logo: "/lovable-uploads/b69d5555-7e1b-455b-a791-d68b06705c1d.png"
     },
     {
       icon: Home,
@@ -18,7 +18,7 @@ const Services = () => {
       description: "Bibe",
       color: "text-blue-600 bg-blue-100",
       savings: "Hasta 200€/año",
-      logo: "/lovable-uploads/0706301c-4ef6-45f1-b7c7-f30169b76a42.png"
+      logo: "/lovable-uploads/84c1cc4f-a946-4d33-85ef-75dbc9d3f079.png"
     },
     {
       icon: Zap,
@@ -26,7 +26,7 @@ const Services = () => {
       description: "Plenitude",
       color: "text-green-600 bg-green-100",
       savings: "Hasta 350€/año",
-      logo: "/lovable-uploads/0706301c-4ef6-45f1-b7c7-f30169b76a42.png"
+      logo: "/lovable-uploads/449f55fe-0435-40a7-9a35-1e3f3b479371.png"
     },
     {
       icon: Shield,
@@ -34,7 +34,7 @@ const Services = () => {
       description: "ADT",
       color: "text-red-600 bg-red-100",
       savings: "Hasta 150€/año",
-      logo: "/lovable-uploads/0706301c-4ef6-45f1-b7c7-f30169b76a42.png"
+      logo: "/lovable-uploads/bc890bea-8b9c-4345-a46a-be51d1cfc8ff.png"
     },
     {
       icon: Wifi,
@@ -42,15 +42,7 @@ const Services = () => {
       description: "Finetwork",
       color: "text-purple-600 bg-purple-100",
       savings: "Hasta 180€/año",
-      logo: "/lovable-uploads/191a829f-91fd-4a45-8f63-3cf2c623b979.png"
-    },
-    {
-      icon: Car,
-      title: "Carga Vehículos",
-      description: "Puntos de carga eléctrica",
-      color: "text-emerald-600 bg-emerald-100",
-      savings: "Hasta 250€/año",
-      logo: "/lovable-uploads/191a829f-91fd-4a45-8f63-3cf2c623b979.png"
+      logo: "/lovable-uploads/07da68c2-c969-48be-a4e6-9d79d1886a0d.png"
     }
   ];
 
