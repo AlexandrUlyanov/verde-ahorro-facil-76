@@ -65,7 +65,7 @@ const Hero = () => {
             <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg">
               <Clock className="w-8 h-8 text-emerald-600" />
               <div className="text-left">
-                <div className="text-xl font-bold text-gray-900">< 24h</div>
+                <div className="text-xl font-bold text-gray-900">&lt; 24h</div>
                 <div className="text-sm text-gray-600">Tiempo respuesta</div>
               </div>
             </div>

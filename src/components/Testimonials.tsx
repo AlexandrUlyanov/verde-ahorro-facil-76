@@ -129,7 +129,7 @@ const Testimonials = () => {
                 <div className="text-gray-600 font-medium">Ahorro medio/negocio</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-emerald-600 mb-2">< 24h</div>
+                <div className="text-4xl font-bold text-emerald-600 mb-2">&lt; 24h</div>
                 <div className="text-gray-600 font-medium">Tiempo respuesta</div>
               </div>
             </div>
