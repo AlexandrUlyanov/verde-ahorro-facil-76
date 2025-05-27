@@ -7,44 +7,50 @@ const Services = () => {
     {
       icon: Zap,
       title: "Electricidad",
-      description: "Wypo, Plenitude, Endesa...",
+      description: "Wypo",
       color: "text-yellow-600 bg-yellow-100",
-      savings: "Hasta 300€/año"
-    },
-    {
-      icon: Phone,
-      title: "Telefonía e Internet",
-      description: "Finetwork, Digi, Movistar...",
-      color: "text-blue-600 bg-blue-100",
-      savings: "Hasta 200€/año"
-    },
-    {
-      icon: Shield,
-      title: "Seguros",
-      description: "Hogar, coche, vida",
-      color: "text-red-600 bg-red-100",
-      savings: "Hasta 400€/año"
+      savings: "Hasta 300€/año",
+      logo: "/lovable-uploads/0706301c-4ef6-45f1-b7c7-f30169b76a42.png"
     },
     {
       icon: Home,
+      title: "Gas Natural",
+      description: "Bibe",
+      color: "text-blue-600 bg-blue-100",
+      savings: "Hasta 200€/año",
+      logo: "/lovable-uploads/0706301c-4ef6-45f1-b7c7-f30169b76a42.png"
+    },
+    {
+      icon: Zap,
+      title: "Energía Verde",
+      description: "Plenitude",
+      color: "text-green-600 bg-green-100",
+      savings: "Hasta 350€/año",
+      logo: "/lovable-uploads/0706301c-4ef6-45f1-b7c7-f30169b76a42.png"
+    },
+    {
+      icon: Shield,
       title: "Alarmas",
-      description: "ADT, Securitas Direct...",
-      color: "text-orange-600 bg-orange-100",
-      savings: "Hasta 150€/año"
+      description: "ADT",
+      color: "text-red-600 bg-red-100",
+      savings: "Hasta 150€/año",
+      logo: "/lovable-uploads/0706301c-4ef6-45f1-b7c7-f30169b76a42.png"
     },
     {
-      icon: Sun,
-      title: "Placas Solares",
-      description: "Eficiencia energética",
-      color: "text-amber-600 bg-amber-100",
-      savings: "Hasta 800€/año"
+      icon: Wifi,
+      title: "Internet y Móvil",
+      description: "Finetwork",
+      color: "text-purple-600 bg-purple-100",
+      savings: "Hasta 180€/año",
+      logo: "/lovable-uploads/191a829f-91fd-4a45-8f63-3cf2c623b979.png"
     },
     {
-      icon: Battery,
+      icon: Car,
       title: "Carga Vehículos",
       description: "Puntos de carga eléctrica",
       color: "text-emerald-600 bg-emerald-100",
-      savings: "Hasta 250€/año"
+      savings: "Hasta 250€/año",
+      logo: "/lovable-uploads/191a829f-91fd-4a45-8f63-3cf2c623b979.png"
     }
   ];
 
@@ -75,6 +81,13 @@ const Services = () => {
                   <service.icon className="w-10 h-10" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <div className="mb-4">
+                  <img 
+                    src={service.logo} 
+                    alt={service.description}
+                    className="h-12 mx-auto object-contain"
+                  />
+                </div>
                 <p className="text-gray-600 text-lg">{service.description}</p>
               </CardContent>
             </Card>
