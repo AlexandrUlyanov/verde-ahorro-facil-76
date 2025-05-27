@@ -6,13 +6,18 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Shield, Clock, Euro, FileText, Phone } from "lucide-react";
+import { Shield, Clock, Euro, FileText, Phone, UserX } from "lucide-react";
 
 const FAQ = () => {
   const faqs = [
     {
+      question: "¿Y si no quiero contratar nada al final?",
+      answer: "No pasa absolutamente nada. El análisis es completamente gratuito y sin compromiso. Solo te presentamos opciones mejores que tu tarifa actual, pero la decisión final es 100% tuya. No hay presión ni obligaciones.",
+      icon: UserX
+    },
+    {
       question: "¿Qué pasa con mis datos personales?",
-      answer: "Tus datos están 100% protegidos. Solo usamos tu información para analizar tu factura y contactarte con propuestas de ahorro. Cumplimos estrictamente con la RGPD y nunca vendemos ni compartimos tus datos.",
+      answer: "Tus datos están 100% protegidos con cifrado SSL y cumplimos estrictamente con la RGPD. Solo usamos tu información para analizar tu factura y contactarte con propuestas de ahorro. Nunca vendemos ni compartimos tus datos con terceros.",
       icon: Shield
     },
     {
@@ -21,19 +26,14 @@ const FAQ = () => {
       icon: Clock
     },
     {
-      question: "¿Tengo que contratar algo obligatoriamente?",
-      answer: "No, absolutamente nada. El análisis es completamente gratuito y sin compromiso. Solo te presentamos opciones mejores que tu tarifa actual. Tú decides si quieres proceder o no.",
+      question: "¿Este servicio es realmente gratuito?",
+      answer: "Sí, es 100% gratuito para ti. Solo cobramos una pequeña comisión a las compañías cuando consigues una tarifa mejor. Si no mejoramos tu factura, no hay ningún coste para ti. Así de simple.",
       icon: Euro
     },
     {
-      question: "¿Este servicio es realmente gratuito?",
-      answer: "Sí, es 100% gratuito para ti. Solo cobramos una pequeña comisión a las compañías cuando consigues una tarifa mejor. Si no mejoramos tu factura, no hay ningún coste.",
-      icon: FileText
-    },
-    {
       question: "¿Qué tipos de facturas podéis analizar?",
-      answer: "Analizamos facturas de luz, gas natural, móvil, fibra, seguros de hogar y coche, alarmas, y cualquier servicio recurrente del hogar. Cuantas más facturas envíes, más ahorro podemos encontrarte.",
-      icon: Phone
+      answer: "Analizamos facturas de luz, gas natural, móvil, fibra, seguros de hogar y coche, alarmas, hipotecas y cualquier servicio recurrente del hogar. Cuantas más facturas envíes, más ahorro podemos encontrarte.",
+      icon: FileText
     }
   ];
 
@@ -42,10 +42,10 @@ const FAQ = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Preguntas <span className="text-emerald-600">frecuentes</span>
+            Resolvemos tus <span className="text-emerald-600">dudas</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Resolvemos todas tus dudas sobre nuestro servicio de análisis gratuito
+            Transparencia total. Estas son las preguntas más frecuentes sobre nuestro servicio
           </p>
         </div>
 
@@ -74,8 +74,8 @@ const FAQ = () => {
 
           <div className="text-center mt-12">
             <div className="bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold mb-4">¿Tienes más preguntas?</h3>
-              <p className="text-xl mb-6 opacity-90">Nuestro equipo está aquí para ayudarte</p>
+              <h3 className="text-2xl font-bold mb-4">🛡️ Máxima seguridad y transparencia</h3>
+              <p className="text-xl mb-6 opacity-90">Si tienes más preguntas, nuestro equipo está aquí para ayudarte</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="https://wa.me/34600123456" 
@@ -87,11 +87,11 @@ const FAQ = () => {
                   WhatsApp: 600 123 456
                 </a>
                 <a 
-                  href="mailto:info@verdeahorrofacil.com"
+                  href="mailto:info@entraycompara.com"
                   className="bg-emerald-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-emerald-800 transition-colors inline-flex items-center justify-center gap-2"
                 >
                   <FileText className="w-5 h-5" />
-                  info@verdeahorrofacil.com
+                  info@entraycompara.com
                 </a>
               </div>
             </div>
