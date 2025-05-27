@@ -1,56 +1,50 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Zap, Wifi, Home, Shield, Car, Phone, Banknote, Calculator } from "lucide-react";
+import { Zap, Wifi, Home, Shield, Car, Phone, Sun, Battery } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       icon: Zap,
-      title: "Luz",
-      description: "Compañías eléctricas",
-      color: "text-yellow-600 bg-yellow-100"
-    },
-    {
-      icon: Home,
-      title: "Gas",
-      description: "Suministro de gas natural",
-      color: "text-blue-600 bg-blue-100"
-    },
-    {
-      icon: Wifi,
-      title: "Internet",
-      description: "Fibra y móvil",
-      color: "text-purple-600 bg-purple-100"
+      title: "Electricidad",
+      description: "Wypo, Plenitude, Endesa...",
+      color: "text-yellow-600 bg-yellow-100",
+      savings: "Hasta 300€/año"
     },
     {
       icon: Phone,
-      title: "Teléfono",
-      description: "Líneas fijas y móviles",
-      color: "text-green-600 bg-green-100"
+      title: "Telefonía e Internet",
+      description: "Finetwork, Digi, Movistar...",
+      color: "text-blue-600 bg-blue-100",
+      savings: "Hasta 200€/año"
     },
     {
       icon: Shield,
       title: "Seguros",
-      description: "Auto, hogar, vida",
-      color: "text-red-600 bg-red-100"
+      description: "Hogar, coche, vida",
+      color: "text-red-600 bg-red-100",
+      savings: "Hasta 400€/año"
     },
     {
-      icon: Banknote,
-      title: "Hipotecas",
-      description: "Préstamos hipotecarios",
-      color: "text-emerald-600 bg-emerald-100"
+      icon: Home,
+      title: "Alarmas",
+      description: "ADT, Securitas Direct...",
+      color: "text-orange-600 bg-orange-100",
+      savings: "Hasta 150€/año"
     },
     {
-      icon: Car,
-      title: "Combustible",
-      description: "Tarjetas de descuento",
-      color: "text-orange-600 bg-orange-100"
+      icon: Sun,
+      title: "Placas Solares",
+      description: "Eficiencia energética",
+      color: "text-amber-600 bg-amber-100",
+      savings: "Hasta 800€/año"
     },
     {
-      icon: Calculator,
-      title: "Otros servicios",
-      description: "Cualquier factura recurrente",
-      color: "text-gray-600 bg-gray-100"
+      icon: Battery,
+      title: "Carga Vehículos",
+      description: "Puntos de carga eléctrica",
+      color: "text-emerald-600 bg-emerald-100",
+      savings: "Hasta 250€/año"
     }
   ];
 
@@ -59,37 +53,43 @@ const Services = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Comparamos <span className="text-emerald-600">todos</span> tus servicios
+            Servicios que <span className="text-emerald-600">analizamos</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Desde facturas de luz hasta seguros. Analizamos cada uno de tus gastos esenciales 
-            para encontrar las mejores opciones del mercado.
+            Comparamos tu factura actual con las mejores ofertas del mercado en cada categoría
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <Card 
               key={service.title} 
-              className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg"
+              className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-0 shadow-lg relative overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <CardContent className="p-6 text-center">
-                <div className={`w-16 h-16 ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8" />
+              <div className="absolute top-0 right-0 bg-emerald-600 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">
+                {service.savings}
+              </div>
+              <CardContent className="p-8 text-center">
+                <div className={`w-20 h-20 ${service.color} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-500 group-hover:rotate-6`}>
+                  <service.icon className="w-10 h-10" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 text-lg">{service.description}</p>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-lg text-gray-600">
-            <span className="font-semibold text-emerald-600">¿No ves tu servicio?</span> 
-            {" "}Contacta con nosotros, comparamos cualquier factura recurrente.
-          </p>
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-emerald-50 to-green-50 rounded-3xl p-8 max-w-4xl mx-auto border border-emerald-200">
+            <p className="text-xl text-gray-700 mb-4">
+              <span className="font-bold text-emerald-600">¿No ves tu servicio?</span> 
+            </p>
+            <p className="text-lg text-gray-600">
+              Analizamos cualquier factura recurrente. Solo sube la que quieras revisar.
+            </p>
+          </div>
         </div>
       </div>
     </section>
