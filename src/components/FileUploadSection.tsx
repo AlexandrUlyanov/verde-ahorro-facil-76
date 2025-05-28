@@ -93,6 +93,10 @@ const FileUploadSection = () => {
     window.open(`https://wa.me/34681930144?text=${message}`, '_blank');
   };
 
+  const handlePrivacyChange = (checked: boolean | "indeterminate") => {
+    setAcceptedPrivacy(checked === true);
+  };
+
   return (
     <section id="subir-factura" className="py-20 bg-gradient-to-br from-emerald-600 to-green-700 text-white">
       <div className="container mx-auto px-6">
@@ -180,6 +184,9 @@ const FileUploadSection = () => {
                     <MessageSquare className="mr-2 w-5 h-5" />
                     O enviar por WhatsApp
                   </Button>
+                  <p className="text-white/70 text-sm mt-2">
+                    Análisis gratuito en menos de 24h
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -231,7 +238,7 @@ const FileUploadSection = () => {
                     <Checkbox 
                       id="privacy"
                       checked={acceptedPrivacy}
-                      onCheckedChange={setAcceptedPrivacy}
+                      onCheckedChange={handlePrivacyChange}
                       className="border-white/30 data-[state=checked]:bg-white data-[state=checked]:text-emerald-600"
                     />
                     <label htmlFor="privacy" className="text-sm text-white/90 leading-relaxed cursor-pointer">
@@ -250,6 +257,10 @@ const FileUploadSection = () => {
                     Continuar al análisis
                     <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
+
+                  <p className="text-center text-white/70 text-sm">
+                    Análisis gratuito en menos de 24h
+                  </p>
                 </form>
 
                 <div className="mt-8 space-y-4">
