@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, Play } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -55,7 +55,8 @@ const Testimonials = () => {
       rating: 5,
       image: "/lovable-uploads/db2ebc81-2959-4661-ba4e-e4730b090c7f.png",
       service: "Empresa",
-      isCompany: true
+      isCompany: true,
+      hasProof: true
     }
   ];
 
@@ -69,6 +70,25 @@ const Testimonials = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Testimonios reales de personas y empresas que ya están ahorrando con nosotros
           </p>
+          
+          {/* Video testimonial destacado */}
+          <div className="mt-12 max-w-2xl mx-auto">
+            <div className="relative bg-gray-900 rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
+              <img 
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=300&fit=crop" 
+                alt="Video testimonial destacado"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-all duration-300">
+                <div className="bg-white/20 backdrop-blur-sm border-2 border-white text-white rounded-full w-20 h-20 flex items-center justify-center group-hover:scale-110 transition-all duration-300">
+                  <Play className="w-8 h-8 ml-1" />
+                </div>
+              </div>
+              <div className="absolute bottom-4 left-4 bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                📹 Testimonio de María - Ahorró 418€
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="max-w-6xl mx-auto">
@@ -76,10 +96,10 @@ const Testimonials = () => {
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={testimonial.name} className="md:basis-1/2 lg:basis-1/3">
-                  <Card className="hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-white to-emerald-50 h-full">
+                  <Card className="hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-white to-emerald-50 h-full relative overflow-hidden">
                     <CardContent className="p-8 h-full flex flex-col">
                       <div className="flex items-start gap-4 mb-6">
-                        <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-4 border-emerald-200">
+                        <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 border-4 border-emerald-200 shadow-lg">
                           <img
                             src={testimonial.image}
                             alt={testimonial.name}
@@ -91,10 +111,15 @@ const Testimonials = () => {
                           <p className="text-emerald-600 text-sm font-medium">{testimonial.location}</p>
                           <p className="text-gray-500 text-sm">{testimonial.service}</p>
                         </div>
-                        <div className={`px-3 py-1 rounded-full text-sm font-bold text-white ${
-                          testimonial.isCompany ? 'bg-orange-600' : 'bg-emerald-600'
+                      </div>
+
+                      {/* Ahorro destacado visualmente */}
+                      <div className="text-center mb-6">
+                        <div className={`inline-block px-6 py-4 rounded-2xl text-white font-bold shadow-lg ${
+                          testimonial.isCompany ? 'bg-gradient-to-r from-orange-500 to-red-500' : 'bg-gradient-to-r from-emerald-500 to-green-500'
                         }`}>
-                          {testimonial.saving}
+                          <div className="text-3xl font-black">{testimonial.saving}</div>
+                          <div className="text-sm opacity-90">de ahorro</div>
                         </div>
                       </div>
 
@@ -105,10 +130,18 @@ const Testimonials = () => {
                         </p>
                       </div>
 
-                      <div className="flex items-center gap-1 mt-auto">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                        ))}
+                      <div className="flex items-center justify-between mt-auto">
+                        <div className="flex items-center gap-1">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                          ))}
+                        </div>
+                        
+                        {testimonial.hasProof && (
+                          <div className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
+                            ✓ Con pruebas
+                          </div>
+                        )}
                       </div>
                     </CardContent>
                   </Card>
@@ -124,20 +157,20 @@ const Testimonials = () => {
           <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl p-10 shadow-xl max-w-5xl mx-auto border border-emerald-200">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-emerald-600 mb-2">+15.000</div>
-                <div className="text-gray-600 font-medium">Clientes asesorados</div>
+                <div className="text-4xl font-bold text-emerald-600 mb-2">15.342</div>
+                <div className="text-gray-600 font-medium">Facturas analizadas este mes</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-emerald-600 mb-2">218€</div>
+                <div className="text-4xl font-bold text-emerald-600 mb-2">€318</div>
                 <div className="text-gray-600 font-medium">Ahorro medio/hogar</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-emerald-600 mb-2">1.120€</div>
+                <div className="text-4xl font-bold text-emerald-600 mb-2">€1.420</div>
                 <div className="text-gray-600 font-medium">Ahorro medio/negocio</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-emerald-600 mb-2">&lt; 24h</div>
-                <div className="text-gray-600 font-medium">Tiempo respuesta</div>
+                <div className="text-4xl font-bold text-emerald-600 mb-2">&lt; 18h</div>
+                <div className="text-gray-600 font-medium">Tiempo respuesta medio</div>
               </div>
             </div>
           </div>

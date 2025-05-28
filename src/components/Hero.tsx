@@ -10,7 +10,7 @@ const Hero = () => {
 
   const openWhatsApp = () => {
     const message = encodeURIComponent("Hola! Quiero que analicéis mi factura para ver cuánto puedo ahorrar. ¿Me podéis ayudar?");
-    window.open(`https://wa.me/34600123456?text=${message}`, '_blank');
+    window.open(`https://wa.me/34681930144?text=${message}`, '_blank');
   };
 
   return (
@@ -33,12 +33,12 @@ const Hero = () => {
                 Análisis 100% gratuito • Sin compromiso • Expertos reales
               </div>
 
-              {/* Main Heading - Según experto */}
+              {/* Main Heading - Actualizado */}
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in">
-                ¿Por qué seguir <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">pagando de más?</span>
+                ¿Cansado de <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">facturas abusivas?</span> Ahorra hasta un <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">50%</span> sin cambiar tus hábitos
               </h1>
 
-              {/* Subtítulo según experto */}
+              {/* Subtítulo mantenido */}
               <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed animate-fade-in">
                 Te analizamos gratis tu factura en menos de 24h. Sin compromiso.
               </p>
@@ -65,23 +65,30 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* CTA Buttons más prominentes */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center mb-12 animate-fade-in">
-                <Button 
-                  onClick={scrollToUpload}
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-12 py-8 text-2xl rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 min-w-[300px] font-bold"
-                >
-                  <Upload className="mr-4 w-8 h-8" />
-                  Subir factura ahora
-                </Button>
+              {/* CTAs optimizados con jerarquía visual clara */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center mb-6 animate-fade-in">
+                <div className="flex flex-col items-center">
+                  <Button 
+                    onClick={scrollToUpload}
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white px-12 py-8 text-2xl rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 min-w-[300px] font-bold"
+                  >
+                    <Upload className="mr-4 w-8 h-8" />
+                    Subir factura ahora
+                  </Button>
+                </div>
                 <Button 
                   onClick={openWhatsApp}
-                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                  className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-gray-500"
                 >
                   <MessageSquare className="mr-3 w-6 h-6" />
                   WhatsApp directo
                 </Button>
               </div>
+
+              {/* Micro-texto debajo de CTAs */}
+              <p className="text-gray-500 text-sm font-medium animate-fade-in">
+                ✅ Análisis gratuito en menos de 24h
+              </p>
             </div>
 
             {/* Right Column - Video */}

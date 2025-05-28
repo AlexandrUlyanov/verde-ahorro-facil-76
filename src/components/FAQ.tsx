@@ -6,10 +6,25 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Shield, Clock, Euro, FileText, Phone, UserX } from "lucide-react";
+import { Shield, Clock, Euro, FileText, Phone, UserX, RefreshCw, CheckCircle } from "lucide-react";
 
 const FAQ = () => {
   const faqs = [
+    {
+      question: "¿Tengo que cambiar de compañía?",
+      answer: "No necesariamente. En muchos casos podemos mejorar tu tarifa actual con tu misma compañía negociando mejores condiciones. Solo te recomendamos cambiar si encontramos una opción significativamente mejor. La decisión siempre es tuya.",
+      icon: RefreshCw
+    },
+    {
+      question: "¿Cuánto tiempo tarda el proceso completo?",
+      answer: "El análisis inicial lo tienes en menos de 24 horas. Si decides proceder con nuestras recomendaciones, el cambio completo suele tardar entre 7-15 días laborables, dependiendo del tipo de servicio. Te acompañamos en todo el proceso.",
+      icon: Clock
+    },
+    {
+      question: "¿Qué pasa si no consiguen mejorar mi tarifa?",
+      answer: "Si no encontramos una mejora significativa en tu tarifa actual, no hay ningún coste para ti. Nuestro servicio es 100% gratuito si no conseguimos ahorrarte dinero. Solo cobramos una pequeña comisión a las compañías cuando te ayudamos a ahorrar.",
+      icon: CheckCircle
+    },
     {
       question: "¿Y si no quiero contratar nada al final?",
       answer: "No pasa absolutamente nada. El análisis es completamente gratuito y sin compromiso. Solo te presentamos opciones mejores que tu tarifa actual, pero la decisión final es 100% tuya. No hay presión ni obligaciones.",
@@ -21,19 +36,9 @@ const FAQ = () => {
       icon: Shield
     },
     {
-      question: "¿Cuánto tardáis en revisar mi factura?",
-      answer: "Nuestro equipo de expertos revisa tu factura en menos de 24 horas laborables. Te contactaremos por WhatsApp, email o teléfono con un análisis completo y propuestas personalizadas.",
-      icon: Clock
-    },
-    {
       question: "¿Este servicio es realmente gratuito?",
       answer: "Sí, es 100% gratuito para ti. Solo cobramos una pequeña comisión a las compañías cuando consigues una tarifa mejor. Si no mejoramos tu factura, no hay ningún coste para ti. Así de simple.",
       icon: Euro
-    },
-    {
-      question: "¿Qué tipos de facturas podéis analizar?",
-      answer: "Analizamos facturas de luz, gas natural, móvil, fibra, seguros de hogar y coche, alarmas, hipotecas y cualquier servicio recurrente del hogar. Cuantas más facturas envíes, más ahorro podemos encontrarte.",
-      icon: FileText
     }
   ];
 
@@ -45,7 +50,7 @@ const FAQ = () => {
             Resolvemos tus <span className="text-emerald-600">dudas</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Transparencia total. Estas son las preguntas más frecuentes sobre nuestro servicio
+            Las preguntas más frecuentes sobre nuestro servicio de análisis de facturas
           </p>
         </div>
 
@@ -78,20 +83,20 @@ const FAQ = () => {
               <p className="text-xl mb-6 opacity-90">Si tienes más preguntas, nuestro equipo está aquí para ayudarte</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="https://wa.me/34600123456" 
+                  href="https://wa.me/34681930144" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white text-emerald-600 px-6 py-3 rounded-xl font-semibold hover:bg-emerald-50 transition-colors inline-flex items-center justify-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
-                  WhatsApp: 600 123 456
+                  WhatsApp: +34 681 930 144
                 </a>
                 <a 
-                  href="mailto:info@entraycompara.com"
+                  href="mailto:info.entraycompara@gmail.com"
                   className="bg-emerald-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-emerald-800 transition-colors inline-flex items-center justify-center gap-2"
                 >
                   <FileText className="w-5 h-5" />
-                  info@entraycompara.com
+                  info.entraycompara@gmail.com
                 </a>
               </div>
             </div>

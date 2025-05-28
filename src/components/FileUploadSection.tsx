@@ -3,14 +3,16 @@ import { useState, useCallback } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Upload, FileText, Check, X, MessageSquare, Phone, Mail } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Upload, FileText, Check, X, MessageSquare, Phone, Mail, ChevronRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const FileUploadSection = () => {
   const [files, setFiles] = useState<File[]>([]);
-  const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [name, setName] = useState("");
+  const [invoiceType, setInvoiceType] = useState("");
+  const [acceptedPrivacy, setAcceptedPrivacy] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const { toast } = useToast();
 
@@ -55,10 +57,19 @@ const FileUploadSection = () => {
       return;
     }
 
-    if (!email || !phone || !name) {
+    if (!phone || !invoiceType) {
       toast({
         title: "Error", 
         description: "Por favor, completa todos los campos obligatorios",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!acceptedPrivacy) {
+      toast({
+        title: "Error",
+        description: "Debes aceptar la política de privacidad para continuar",
         variant: "destructive",
       });
       return;
@@ -72,9 +83,9 @@ const FileUploadSection = () => {
 
     // Reset form
     setFiles([]);
-    setEmail("");
     setPhone("");
-    setName("");
+    setInvoiceType("");
+    setAcceptedPrivacy(false);
   };
 
   const openWhatsApp = () => {
@@ -92,6 +103,12 @@ const FileUploadSection = () => {
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Análisis gratuito en menos de 24h. Sin compromiso ni letra pequeña.
           </p>
+          
+          {/* Indicador de progreso */}
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mt-6">
+            <div className="w-8 h-8 bg-emerald-400 text-emerald-900 rounded-full flex items-center justify-center text-sm font-bold">1</div>
+            <span className="text-white font-medium">Paso 1 de 2: Sube tu factura</span>
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -167,40 +184,12 @@ const FileUploadSection = () => {
               </CardContent>
             </Card>
 
-            {/* Contact Form */}
+            {/* Formulario simplificado */}
             <Card className="bg-white/10 backdrop-blur-md border-white/20">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-white">Tus datos de contacto</h3>
+                <h3 className="text-2xl font-bold mb-6 text-white">Datos básicos</h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium text-white/90 mb-2">
-                      Nombre completo *
-                    </label>
-                    <Input
-                      type="text"
-                      placeholder="Tu nombre"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      required
-                      className="bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:border-white focus:ring-white"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-white/90 mb-2">
-                      Email *
-                    </label>
-                    <Input
-                      type="email"
-                      placeholder="tu@email.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                      className="bg-white/10 border-white/30 text-white placeholder:text-white/60 focus:border-white focus:ring-white"
-                    />
-                  </div>
-
                   <div>
                     <label className="block text-sm font-medium text-white/90 mb-2">
                       Teléfono *
@@ -215,12 +204,51 @@ const FileUploadSection = () => {
                     />
                   </div>
 
+                  <div>
+                    <label className="block text-sm font-medium text-white/90 mb-2">
+                      Tipo de factura principal *
+                    </label>
+                    <Select value={invoiceType} onValueChange={setInvoiceType} required>
+                      <SelectTrigger className="bg-white/10 border-white/30 text-white focus:border-white focus:ring-white">
+                        <SelectValue placeholder="Selecciona el tipo" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="luz">Electricidad</SelectItem>
+                        <SelectItem value="gas">Gas natural</SelectItem>
+                        <SelectItem value="luz-gas">Luz + Gas</SelectItem>
+                        <SelectItem value="internet">Internet/Fibra</SelectItem>
+                        <SelectItem value="movil">Móvil</SelectItem>
+                        <SelectItem value="internet-movil">Internet + Móvil</SelectItem>
+                        <SelectItem value="seguro-hogar">Seguro de hogar</SelectItem>
+                        <SelectItem value="seguro-coche">Seguro de coche</SelectItem>
+                        <SelectItem value="otros">Otros servicios</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  {/* Checkbox de política de privacidad */}
+                  <div className="flex items-start space-x-3">
+                    <Checkbox 
+                      id="privacy"
+                      checked={acceptedPrivacy}
+                      onCheckedChange={setAcceptedPrivacy}
+                      className="border-white/30 data-[state=checked]:bg-white data-[state=checked]:text-emerald-600"
+                    />
+                    <label htmlFor="privacy" className="text-sm text-white/90 leading-relaxed cursor-pointer">
+                      He leído y acepto la{" "}
+                      <a href="#" className="text-emerald-200 underline hover:text-white transition-colors">
+                        política de privacidad
+                      </a>
+                    </label>
+                  </div>
+
                   <Button 
                     type="submit"
-                    className="w-full bg-white text-emerald-600 hover:bg-emerald-50 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
+                    className="w-full bg-white text-emerald-600 hover:bg-emerald-50 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group"
                   >
                     <Check className="mr-2 w-5 h-5" />
-                    Enviar para análisis gratuito
+                    Continuar al análisis
+                    <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </form>
 
