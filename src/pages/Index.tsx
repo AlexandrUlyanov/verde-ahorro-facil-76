@@ -5,10 +5,8 @@ import Services from "@/components/Services";
 import HowItWorks from "@/components/HowItWorks";
 import VideoSection from "@/components/VideoSection";
 import SavingsCalculator from "@/components/SavingsCalculator";
-import CaseStudies from "@/components/CaseStudies";
 import FileUploadSection from "@/components/FileUploadSection";
 import Testimonials from "@/components/Testimonials";
-import TeamSection from "@/components/TeamSection";
 import SecondaryUploadForm from "@/components/SecondaryUploadForm";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -22,10 +20,8 @@ const Index = () => {
       <Services />
       <VideoSection />
       <SavingsCalculator />
-      <CaseStudies />
       <FileUploadSection />
       <Testimonials />
-      <TeamSection />
       <SecondaryUploadForm />
       <FAQ />
       <Footer />
