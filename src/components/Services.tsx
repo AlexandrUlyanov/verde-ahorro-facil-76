@@ -9,7 +9,6 @@ const Services = () => {
       title: "Luz y gas",
       description: "Energía para tu hogar",
       color: "text-yellow-600 bg-yellow-100",
-      savings: "Hasta 350€/año",
       logo: "/lovable-uploads/b69d5555-7e1b-455b-a791-d68b06705c1d.png"
     },
     {
@@ -17,7 +16,6 @@ const Services = () => {
       title: "Internet y móvil",
       description: "Conectividad completa",
       color: "text-purple-600 bg-purple-100",
-      savings: "Hasta 180€/año",
       logo: "/lovable-uploads/07da68c2-c969-48be-a4e6-9d79d1886a0d.png"
     },
     {
@@ -25,7 +23,6 @@ const Services = () => {
       title: "Alarmas",
       description: "Seguridad del hogar",
       color: "text-red-600 bg-red-100",
-      savings: "Hasta 150€/año",
       logo: "/lovable-uploads/bc890bea-8b9c-4345-a46a-be51d1cfc8ff.png"
     },
     {
@@ -33,7 +30,6 @@ const Services = () => {
       title: "Hipotecas",
       description: "Financiación inmobiliaria",
       color: "text-blue-600 bg-blue-100",
-      savings: "Hasta 900€/año",
       logo: "/lovable-uploads/84c1cc4f-a946-4d33-85ef-75dbc9d3f079.png"
     },
     {
@@ -41,7 +37,6 @@ const Services = () => {
       title: "Seguros",
       description: "Protección integral",
       color: "text-green-600 bg-green-100",
-      savings: "Hasta 400€/año",
       logo: "/lovable-uploads/449f55fe-0435-40a7-9a35-1e3f3b479371.png"
     }
   ];
@@ -65,9 +60,6 @@ const Services = () => {
               className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border-0 shadow-lg relative overflow-hidden h-full"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="absolute top-0 right-0 bg-emerald-600 text-white px-3 py-1 text-xs font-bold rounded-bl-lg z-10">
-                {service.savings}
-              </div>
               <CardContent className="p-6 text-center h-full flex flex-col">
                 <div className={`w-16 h-16 ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-500 group-hover:rotate-6`}>
                   <service.icon className="w-8 h-8" />
