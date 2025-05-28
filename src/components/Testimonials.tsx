@@ -17,7 +17,7 @@ const Testimonials = () => {
       content: "Con entraYcompara ahorré más de 400€ sin cambiar de compañía. Rápido y sin líos.",
       saving: "418€/año",
       rating: 5,
-      image: "/lovable-uploads/db2ebc81-2959-4661-ba4e-e4730b090c7f.png",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b547?w=400&h=400&fit=crop&crop=face",
       service: "Luz + Gas"
     },
     {
@@ -26,7 +26,7 @@ const Testimonials = () => {
       content: "Pensaba que estaba pagando lo justo… hasta que me enseñaron cuánto podía ahorrar.",
       saving: "286€/año",
       rating: 5,
-      image: "/lovable-uploads/db2ebc81-2959-4661-ba4e-e4730b090c7f.png",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
       service: "Electricidad"
     },
     {
@@ -35,7 +35,7 @@ const Testimonials = () => {
       content: "Me sorprendió lo fácil que fue. En menos de 24 h ya tenía una tarifa mejor.",
       saving: "41€/mes",
       rating: 5,
-      image: "/lovable-uploads/db2ebc81-2959-4661-ba4e-e4730b090c7f.png",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
       service: "Internet + Móvil"
     },
     {
@@ -44,7 +44,7 @@ const Testimonials = () => {
       content: "No tuve que hacer nada. Ellos lo compararon todo por mí. Literalmente ahorro sin moverme.",
       saving: "172€/año",
       rating: 5,
-      image: "/lovable-uploads/db2ebc81-2959-4661-ba4e-e4730b090c7f.png",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
       service: "Luz"
     },
     {
@@ -53,7 +53,7 @@ const Testimonials = () => {
       content: "Gracias a entraYcompara, optimizamos nuestras facturas de luz, gas e internet en la empresa. El ahorro ha sido brutal.",
       saving: "5.304,93€",
       rating: 5,
-      image: "/lovable-uploads/db2ebc81-2959-4661-ba4e-e4730b090c7f.png",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
       service: "Empresa",
       isCompany: true,
       hasProof: true

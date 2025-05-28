@@ -9,7 +9,7 @@ const Services = () => {
       title: "Luz y gas",
       description: "Energía para tu hogar",
       color: "text-yellow-600 bg-yellow-100",
-      logo: "/lovable-uploads/b69d5555-7e1b-455b-a791-d68b06705c1d.png"
+      logo: "/lovable-uploads/0706301c-4ef6-45f1-b7c7-f30169b76a42.png" // Plenitude logo
     },
     {
       icon: Wifi,
@@ -30,14 +30,14 @@ const Services = () => {
       title: "Hipotecas",
       description: "Financiación inmobiliaria",
       color: "text-blue-600 bg-blue-100",
-      logo: "/lovable-uploads/84c1cc4f-a946-4d33-85ef-75dbc9d3f079.png"
+      logo: "/lovable-uploads/191a829f-91fd-4a45-8f63-3cf2c623b979.png" // Wypo logo
     },
     {
       icon: CreditCard,
       title: "Seguros",
       description: "Protección integral",
       color: "text-green-600 bg-green-100",
-      logo: "/lovable-uploads/449f55fe-0435-40a7-9a35-1e3f3b479371.png"
+      logo: "/lovable-uploads/191a829f-91fd-4a45-8f63-3cf2c623b979.png" // Bibe Seguros logo
     }
   ];
 

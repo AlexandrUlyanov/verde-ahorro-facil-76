@@ -6,8 +6,6 @@ import HowItWorks from "@/components/HowItWorks";
 import VideoSection from "@/components/VideoSection";
 import FileUploadSection from "@/components/FileUploadSection";
 import Testimonials from "@/components/Testimonials";
-import CredibilitySection from "@/components/CredibilitySection";
-import Urgency from "@/components/Urgency";
 import SecondaryUploadForm from "@/components/SecondaryUploadForm";
 import FAQ from "@/components/FAQ";
 import TrustElements from "@/components/TrustElements";
@@ -23,8 +21,6 @@ const Index = () => {
       <VideoSection />
       <FileUploadSection />
       <Testimonials />
-      <CredibilitySection />
-      <Urgency />
       <SecondaryUploadForm />
       <FAQ />
       <TrustElements />

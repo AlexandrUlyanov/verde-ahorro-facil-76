@@ -12,12 +12,12 @@ const FAQ = () => {
   const faqs = [
     {
       question: "¿Tengo que cambiar de compañía?",
-      answer: "No necesariamente. En muchos casos podemos mejorar tu tarifa actual con tu misma compañía negociando mejores condiciones. Solo te recomendamos cambiar si encontramos una opción significativamente mejor. La decisión siempre es tuya.",
+      answer: "Sí, ya que por ahora solo trabajamos con Plenitude por los ahorros significativos que puedes hacer.",
       icon: RefreshCw
     },
     {
       question: "¿Cuánto tiempo tarda el proceso completo?",
-      answer: "El análisis inicial lo tienes en menos de 24 horas. Si decides proceder con nuestras recomendaciones, el cambio completo suele tardar entre 7-15 días laborables, dependiendo del tipo de servicio. Te acompañamos en todo el proceso.",
+      answer: "El análisis inicial lo tienes en menos de 24 horas. Si decides proceder con nuestras recomendaciones, te acompañamos en todo el proceso.",
       icon: Clock
     },
     {
