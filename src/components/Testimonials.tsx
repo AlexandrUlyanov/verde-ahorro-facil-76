@@ -14,47 +14,48 @@ const Testimonials = () => {
     {
       name: "María G.",
       location: "Zaragoza",
-      content: "Con entraYcompara ahorré 418 €/año solo en luz y móvil. Muy fácil y sin llamadas raras. Lo recomiendo 100%.",
+      content: "Con entraYcompara ahorré más de 400€ sin cambiar de compañía. Rápido y sin líos.",
       saving: "418€/año",
       rating: 5,
-      avatar: "MG",
-      service: "Luz + Móvil"
+      image: "/lovable-uploads/db2ebc81-2959-4661-ba4e-e4730b090c7f.png",
+      service: "Luz + Gas"
     },
     {
-      name: "Ángel C.",
+      name: "Laura T.",
+      location: "Bilbao",
+      content: "Pensaba que estaba pagando lo justo… hasta que me enseñaron cuánto podía ahorrar.",
+      saving: "286€/año",
+      rating: 5,
+      image: "/lovable-uploads/db2ebc81-2959-4661-ba4e-e4730b090c7f.png",
+      service: "Electricidad"
+    },
+    {
+      name: "Carlos V.",
       location: "Valencia",
-      content: "Pensé que era como otros... pero me sorprendió. ¡Ahora pago menos en mi tienda! El análisis fue muy profesional.",
-      saving: "720€/año",
+      content: "Me sorprendió lo fácil que fue. En menos de 24 h ya tenía una tarifa mejor.",
+      saving: "41€/mes",
       rating: 5,
-      avatar: "AC",
-      service: "Negocio"
+      image: "/lovable-uploads/db2ebc81-2959-4661-ba4e-e4730b090c7f.png",
+      service: "Internet + Móvil"
     },
     {
-      name: "Carmen R.",
-      location: "Sevilla",
-      content: "Solo subí mi factura de gas y en un día tenía 3 ofertas mejores. Cambié y ahora ahorro cada mes. Increíble.",
-      saving: "156€/año",
-      rating: 5,
-      avatar: "CR",
-      service: "Gas"
-    },
-    {
-      name: "José L.",
+      name: "Andrea C.",
       location: "Madrid",
-      content: "Mi seguro del coche era carísimo. Me encontraron uno igual por 280€ menos. El servicio fue excelente.",
-      saving: "280€/año",
+      content: "No tuve que hacer nada. Ellos lo compararon todo por mí. Literalmente ahorro sin moverme.",
+      saving: "172€/año",
       rating: 5,
-      avatar: "JL",
-      service: "Seguro coche"
+      image: "/lovable-uploads/db2ebc81-2959-4661-ba4e-e4730b090c7f.png",
+      service: "Luz"
     },
     {
-      name: "Ana M.",
+      name: "Facto RS - Empresa",
       location: "Barcelona",
-      content: "Como familia numerosa gastábamos mucho. Ahora con las nuevas tarifas ahorramos más de 500€ al año.",
-      saving: "567€/año",
+      content: "Gracias a entraYcompara, optimizamos nuestras facturas de luz, gas e internet en la empresa. El ahorro ha sido brutal.",
+      saving: "5.304,93€",
       rating: 5,
-      avatar: "AM",
-      service: "Familia numerosa"
+      image: "/lovable-uploads/db2ebc81-2959-4661-ba4e-e4730b090c7f.png",
+      service: "Empresa",
+      isCompany: true
     }
   ];
 
@@ -66,7 +67,7 @@ const Testimonials = () => {
             Lo que dicen nuestros <span className="text-emerald-600">clientes</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Testimonios reales de personas que ya están ahorrando con nosotros
+            Testimonios reales de personas y empresas que ya están ahorrando con nosotros
           </p>
         </div>
 
@@ -78,15 +79,21 @@ const Testimonials = () => {
                   <Card className="hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-white to-emerald-50 h-full">
                     <CardContent className="p-8 h-full flex flex-col">
                       <div className="flex items-start gap-4 mb-6">
-                        <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">
-                          {testimonial.avatar}
+                        <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-4 border-emerald-200">
+                          <img
+                            src={testimonial.image}
+                            alt={testimonial.name}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <div className="flex-1">
                           <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
                           <p className="text-emerald-600 text-sm font-medium">{testimonial.location}</p>
                           <p className="text-gray-500 text-sm">{testimonial.service}</p>
                         </div>
-                        <div className="bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        <div className={`px-3 py-1 rounded-full text-sm font-bold text-white ${
+                          testimonial.isCompany ? 'bg-orange-600' : 'bg-emerald-600'
+                        }`}>
                           {testimonial.saving}
                         </div>
                       </div>
