@@ -79,7 +79,7 @@ const FileUploadSection = () => {
 
   const openWhatsApp = () => {
     const message = encodeURIComponent("Hola! Quiero que analicéis mi factura para ver cuánto puedo ahorrar. ¿Puedo enviaros la factura por aquí?");
-    window.open(`https://wa.me/34600123456?text=${message}`, '_blank');
+    window.open(`https://wa.me/34681930144?text=${message}`, '_blank');
   };
 
   return (
@@ -230,7 +230,7 @@ const FileUploadSection = () => {
                     <div className="space-y-2 text-sm text-white/90">
                       <div className="flex items-center gap-2">
                         <Mail className="w-4 h-4" />
-                        <span>info@entraycompara.com</span>
+                        <span>info.entraycompara@gmail.com</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Phone className="w-4 h-4" />
@@ -238,7 +238,7 @@ const FileUploadSection = () => {
                       </div>
                       <div className="flex items-center gap-2">
                         <MessageSquare className="w-4 h-4" />
-                        <span>WhatsApp: 600 123 456</span>
+                        <span>WhatsApp: 681 930 144</span>
                       </div>
                     </div>
                   </div>
