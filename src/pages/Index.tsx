@@ -8,7 +8,6 @@ import FileUploadSection from "@/components/FileUploadSection";
 import Testimonials from "@/components/Testimonials";
 import SecondaryUploadForm from "@/components/SecondaryUploadForm";
 import FAQ from "@/components/FAQ";
-import TrustElements from "@/components/TrustElements";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -23,7 +22,6 @@ const Index = () => {
       <Testimonials />
       <SecondaryUploadForm />
       <FAQ />
-      <TrustElements />
       <Footer />
     </div>
   );
