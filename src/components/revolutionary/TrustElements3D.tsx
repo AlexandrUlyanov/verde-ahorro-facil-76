@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Shield, Award, Users, TrendingUp, Lock, CheckCircle } from "lucide-react";
 
 const TrustElements3D = () => {
