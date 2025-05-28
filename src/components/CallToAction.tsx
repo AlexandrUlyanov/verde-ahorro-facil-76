@@ -148,7 +148,7 @@ const CallToAction = () => {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-emerald-200" />
-                    <span className="text-white/90">info@entraycompara.com</span>
+                    <span className="text-white/90">info.entraycompara@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-emerald-200" />
@@ -156,7 +156,7 @@ const CallToAction = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <MessageSquare className="w-5 h-5 text-emerald-200" />
-                    <span className="text-white/90">WhatsApp: 600 123 456</span>
+                    <span className="text-white/90">WhatsApp: 681 930 144</span>
                   </div>
                 </div>
               </CardContent>

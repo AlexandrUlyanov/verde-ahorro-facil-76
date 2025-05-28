@@ -36,7 +36,7 @@ const SecondaryUploadForm = () => {
 
   const openWhatsApp = () => {
     const message = encodeURIComponent("Hola! He visto vuestra web y quiero que analicéis mis facturas para ver cuánto puedo ahorrar. ¿Podemos hablar?");
-    window.open(`https://wa.me/34600123456?text=${message}`, '_blank');
+    window.open(`https://wa.me/34681930144?text=${message}`, '_blank');
   };
 
   return (
@@ -130,7 +130,7 @@ const SecondaryUploadForm = () => {
                     <div className="grid grid-cols-1 gap-3 text-white/90 text-sm">
                       <div className="flex items-center gap-2 bg-white/10 rounded-lg p-3">
                         <Mail className="w-4 h-4" />
-                        <span>info@entraycompara.com</span>
+                        <span>info.entraycompara@gmail.com</span>
                       </div>
                       <div className="flex items-center gap-2 bg-white/10 rounded-lg p-3">
                         <Phone className="w-4 h-4" />

@@ -1,10 +1,9 @@
-
 import { Heart, Mail, Phone, MapPin, MessageSquare, Shield, Lock } from "lucide-react";
 
 const Footer = () => {
   const openWhatsApp = () => {
     const message = encodeURIComponent("Hola! Quiero información sobre el análisis gratuito de facturas.");
-    window.open(`https://wa.me/34600123456?text=${message}`, '_blank');
+    window.open(`https://wa.me/34681930144?text=${message}`, '_blank');
   };
 
   return (
@@ -36,13 +35,13 @@ const Footer = () => {
                 className="flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-xl transition-colors w-full max-w-xs"
               >
                 <MessageSquare className="w-5 h-5" />
-                <span className="font-semibold">WhatsApp: 600 123 456</span>
+                <span className="font-semibold">WhatsApp: 681 930 144</span>
               </button>
               
               <div className="space-y-2">
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-emerald-400" />
-                  <span className="text-gray-300">info@entraycompara.com</span>
+                  <span className="text-gray-300">info.entraycompara@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-emerald-400" />
