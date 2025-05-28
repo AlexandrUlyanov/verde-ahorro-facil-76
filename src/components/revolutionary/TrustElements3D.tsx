@@ -97,6 +97,7 @@ const TrustElements3D = () => {
             {trustElements.map((element, index) => {
               const angle = (360 / trustElements.length) * index;
               const isActive = index === activeElement;
+              const IconComponent = element.icon;
               
               return (
                 <div
@@ -115,7 +116,7 @@ const TrustElements3D = () => {
                     
                     <div className="relative z-10 h-full flex flex-col justify-between">
                       <div className="text-center">
-                        <element.icon className="w-16 h-16 mx-auto mb-4 drop-shadow-lg" />
+                        <IconComponent className="w-16 h-16 mx-auto mb-4 drop-shadow-lg" />
                         <h3 className="text-xl font-bold mb-2">{element.title}</h3>
                         <p className="text-sm opacity-90">{element.description}</p>
                       </div>
@@ -140,7 +141,7 @@ const TrustElements3D = () => {
         <div className="mt-16 text-center">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-2xl mx-auto border border-white/20">
             <div className="flex items-center justify-center gap-4 mb-4">
-              <trustElements[activeElement].icon className="w-12 h-12 text-white" />
+              {React.createElement(trustElements[activeElement].icon, { className: "w-12 h-12 text-white" })}
               <h3 className="text-3xl font-bold text-white">{trustElements[activeElement].title}</h3>
             </div>
             <p className="text-lg text-gray-300 mb-6">{trustElements[activeElement].description}</p>

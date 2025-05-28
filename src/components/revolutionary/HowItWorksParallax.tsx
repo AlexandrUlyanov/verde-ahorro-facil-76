@@ -99,50 +99,53 @@ const HowItWorksParallax = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-screen">
           {/* Steps Navigation */}
           <div className="space-y-8">
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className={`relative transition-all duration-1000 transform ${
-                  index === activeStep 
-                    ? 'scale-105 translate-x-4' 
-                    : index < activeStep 
-                      ? 'opacity-60 scale-95' 
-                      : 'opacity-40 scale-90'
-                }`}
-                onClick={() => setActiveStep(index)}
-              >
-                <div className={`p-6 rounded-2xl bg-gradient-to-br ${step.bgColor} border-2 cursor-pointer ${
-                  index === activeStep ? 'border-emerald-300 shadow-2xl' : 'border-transparent'
-                }`}>
-                  <div className="flex items-start gap-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${step.color} text-white shadow-lg`}>
-                      <step.icon className="w-6 h-6" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-800 mb-2">
-                        {index + 1}. {step.title}
-                      </h3>
-                      <p className="text-gray-600 mb-3">{step.description}</p>
-                      {index === activeStep && (
-                        <div className="animate-fade-in">
-                          <p className="text-sm text-gray-500 italic mb-2">{step.details}</p>
-                          <div className="inline-block bg-white/80 px-3 py-1 rounded-full text-sm font-semibold text-emerald-700">
-                            {step.stats}
+            {steps.map((step, index) => {
+              const StepIcon = step.icon;
+              return (
+                <div
+                  key={index}
+                  className={`relative transition-all duration-1000 transform ${
+                    index === activeStep 
+                      ? 'scale-105 translate-x-4' 
+                      : index < activeStep 
+                        ? 'opacity-60 scale-95' 
+                        : 'opacity-40 scale-90'
+                  }`}
+                  onClick={() => setActiveStep(index)}
+                >
+                  <div className={`p-6 rounded-2xl bg-gradient-to-br ${step.bgColor} border-2 cursor-pointer ${
+                    index === activeStep ? 'border-emerald-300 shadow-2xl' : 'border-transparent'
+                  }`}>
+                    <div className="flex items-start gap-4">
+                      <div className={`p-3 rounded-xl bg-gradient-to-r ${step.color} text-white shadow-lg`}>
+                        <StepIcon className="w-6 h-6" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-800 mb-2">
+                          {index + 1}. {step.title}
+                        </h3>
+                        <p className="text-gray-600 mb-3">{step.description}</p>
+                        {index === activeStep && (
+                          <div className="animate-fade-in">
+                            <p className="text-sm text-gray-500 italic mb-2">{step.details}</p>
+                            <div className="inline-block bg-white/80 px-3 py-1 rounded-full text-sm font-semibold text-emerald-700">
+                              {step.stats}
+                            </div>
                           </div>
-                        </div>
-                      )}
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Connection line */}
-                {index < steps.length - 1 && (
-                  <div className={`absolute left-8 top-full w-0.5 h-8 transition-all duration-500 ${
-                    index < activeStep ? 'bg-emerald-500' : 'bg-gray-300'
-                  }`} />
-                )}
-              </div>
-            ))}
+                  {/* Connection line */}
+                  {index < steps.length - 1 && (
+                    <div className={`absolute left-8 top-full w-0.5 h-8 transition-all duration-500 ${
+                      index < activeStep ? 'bg-emerald-500' : 'bg-gray-300'
+                    }`} />
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           {/* Visual Demonstration */}
@@ -155,7 +158,7 @@ const HowItWorksParallax = () => {
               <div className={`relative p-8 rounded-3xl bg-gradient-to-br ${steps[activeStep].bgColor} shadow-2xl border border-white/50 backdrop-blur-lg`}>
                 <div className="text-center mb-8">
                   <div className={`inline-block p-6 rounded-2xl bg-gradient-to-r ${steps[activeStep].color} text-white shadow-xl mb-4`}>
-                    <steps[activeStep].icon className="w-16 h-16" />
+                    {React.createElement(steps[activeStep].icon, { className: "w-16 h-16" })}
                   </div>
                   <h3 className="text-3xl font-bold text-gray-800 mb-4">
                     {steps[activeStep].title}
