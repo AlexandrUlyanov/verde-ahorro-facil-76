@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Zap, Wifi, Home, Shield, Car, Phone, Sun, Battery, CreditCard } from "lucide-react";
 
@@ -9,35 +8,35 @@ const Services = () => {
       title: "Luz y gas",
       description: "Energía para tu hogar",
       color: "text-yellow-600 bg-yellow-100",
-      logo: "/lovable-uploads/0706301c-4ef6-45f1-b7c7-f30169b76a42.png" // Plenitude logo
+      logo: "/lovable-uploads/5f361c48-f9e6-4e63-8c34-8a79ca2f88bb.png" // Plenitude logo
     },
     {
       icon: Wifi,
       title: "Internet y móvil",
       description: "Conectividad completa",
       color: "text-purple-600 bg-purple-100",
-      logo: "/lovable-uploads/07da68c2-c969-48be-a4e6-9d79d1886a0d.png"
+      logo: "/lovable-uploads/bc76bc6f-eda6-466e-bc52-b96653cd0648.png" // Finetwork logo
     },
     {
       icon: Shield,
       title: "Alarmas",
       description: "Seguridad del hogar",
       color: "text-red-600 bg-red-100",
-      logo: "/lovable-uploads/bc890bea-8b9c-4345-a46a-be51d1cfc8ff.png"
+      logo: "/lovable-uploads/54db1802-f669-4326-b97b-acf7036a38ec.png" // ADT logo
     },
     {
       icon: Home,
       title: "Hipotecas",
       description: "Financiación inmobiliaria",
       color: "text-blue-600 bg-blue-100",
-      logo: "/lovable-uploads/191a829f-91fd-4a45-8f63-3cf2c623b979.png" // Wypo logo
+      logo: "/lovable-uploads/8b98d24a-0fa4-4da8-b74c-b10fc9dae9ae.png" // Wypo logo
     },
     {
       icon: CreditCard,
       title: "Seguros",
       description: "Protección integral",
       color: "text-green-600 bg-green-100",
-      logo: "/lovable-uploads/191a829f-91fd-4a45-8f63-3cf2c623b979.png" // Bibe Seguros logo
+      logo: "/lovable-uploads/6a5c5621-2634-4d7e-ad64-91e451f4ca41.png" // Bibe Seguros logo
     }
   ];
 
