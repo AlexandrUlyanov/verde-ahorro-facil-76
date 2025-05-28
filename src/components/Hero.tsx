@@ -1,7 +1,10 @@
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Upload, MessageSquare, Shield, Clock, TrendingDown, Play } from "lucide-react";
+import TrustBadge from "./hero/TrustBadge";
+import BenefitCards from "./hero/BenefitCards";
+import HeroCTAs from "./hero/HeroCTAs";
+import VideoPlayer from "./hero/VideoPlayer";
+import SuccessStories from "./hero/SuccessStories";
+import MobileCTA from "./hero/MobileCTA";
 
 const Hero = () => {
   const scrollToUpload = () => {
@@ -27,123 +30,35 @@ const Hero = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Content */}
             <div className="text-center lg:text-left">
-              {/* Trust Badge */}
-              <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-700 px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
-                <Shield className="w-4 h-4" />
-                Análisis 100% gratuito • Sin compromiso • Expertos reales
-              </div>
+              <TrustBadge />
 
-              {/* Main Heading - Actualizado */}
+              {/* Main Heading */}
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in">
                 ¿Cansado de <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">facturas abusivas?</span> Ahorra hasta un <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">50%</span> sin cambiar tus hábitos
               </h1>
 
-              {/* Subtítulo mantenido */}
+              {/* Subtitle */}
               <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed animate-fade-in">
                 Te analizamos gratis tu factura en menos de 24h. Sin compromiso.
               </p>
 
-              {/* Beneficios rápidos visuales */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-10 animate-fade-in">
-                <div className="bg-white/80 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg border border-emerald-200">
-                  <div className="flex items-center gap-2">
-                    <TrendingDown className="w-5 h-5 text-emerald-600" />
-                    <span className="text-sm font-medium text-gray-700">Ahorro garantizado</span>
-                  </div>
-                </div>
-                <div className="bg-white/80 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg border border-emerald-200">
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-emerald-600" />
-                    <span className="text-sm font-medium text-gray-700">Revisión en 24h</span>
-                  </div>
-                </div>
-                <div className="bg-white/80 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg border border-emerald-200">
-                  <div className="flex items-center gap-2">
-                    <Shield className="w-5 h-5 text-emerald-600" />
-                    <span className="text-sm font-medium text-gray-700">Asesor personal</span>
-                  </div>
-                </div>
-              </div>
+              <BenefitCards />
 
-              {/* CTAs optimizados con jerarquía visual clara */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center mb-6 animate-fade-in">
-                <div className="flex flex-col items-center">
-                  <Button 
-                    onClick={scrollToUpload}
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white px-12 py-8 text-2xl rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 min-w-[300px] font-bold"
-                  >
-                    <Upload className="mr-4 w-8 h-8" />
-                    Subir factura ahora
-                  </Button>
-                </div>
-                <Button 
-                  onClick={openWhatsApp}
-                  className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-gray-500"
-                >
-                  <MessageSquare className="mr-3 w-6 h-6" />
-                  WhatsApp directo
-                </Button>
-              </div>
-
-              {/* Micro-texto debajo de CTAs */}
-              <p className="text-gray-500 text-sm font-medium animate-fade-in">
-                ✅ Análisis gratuito en menos de 24h
-              </p>
+              <HeroCTAs 
+                onUploadClick={scrollToUpload}
+                onWhatsAppClick={openWhatsApp}
+              />
             </div>
 
             {/* Right Column - Video */}
-            <div className="relative">
-              <div className="aspect-video bg-gray-900 rounded-3xl shadow-2xl overflow-hidden relative group cursor-pointer">
-                <img 
-                  src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=800&h=450&fit=crop" 
-                  alt="Video explicativo de cómo ahorrar en facturas"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition-all duration-300">
-                  <Button className="bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-gray-900 rounded-full w-24 h-24 p-0 group-hover:scale-110 transition-all duration-300">
-                    <Play className="w-10 h-10 ml-1" />
-                  </Button>
-                </div>
-                <div className="absolute bottom-4 left-4 bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                  2:00 min - Cómo funciona
-                </div>
-                <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold">
-                  SIN SONIDO
-                </div>
-              </div>
-            </div>
+            <VideoPlayer />
           </div>
 
-          {/* Casos de éxito rápidos */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-16 animate-fade-in">
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-emerald-200">
-              <div className="text-left">
-                <div className="text-emerald-600 font-bold text-lg mb-2">María (Madrid)</div>
-                <div className="text-gray-700 mb-2">Ahorró <span className="font-bold text-emerald-700">322€/año</span> en 2 facturas</div>
-                <div className="text-sm text-gray-600">"No sabía que podía ahorrar tanto sin cambiar nada"</div>
-              </div>
-            </div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-emerald-200">
-              <div className="text-left">
-                <div className="text-emerald-600 font-bold text-lg mb-2">Carlos (Valencia)</div>
-                <div className="text-gray-700 mb-2">Bajó <span className="font-bold text-emerald-700">41€/mes</span> móvil + luz</div>
-                <div className="text-sm text-gray-600">"El proceso fue súper fácil y rápido"</div>
-              </div>
-            </div>
-          </div>
+          <SuccessStories />
         </div>
       </div>
 
-      {/* Sticky CTA for mobile */}
-      <div className="fixed bottom-4 left-4 right-4 z-50 md:hidden">
-        <Button 
-          onClick={scrollToUpload}
-          className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-4 text-lg font-bold rounded-2xl shadow-2xl"
-        >
-          <Upload className="mr-2 w-5 h-5" />
-          Subir factura gratis
-        </Button>
-      </div>
+      <MobileCTA onUploadClick={scrollToUpload} />
     </section>
   );
 };
