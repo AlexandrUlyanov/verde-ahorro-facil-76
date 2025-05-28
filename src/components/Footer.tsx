@@ -1,3 +1,4 @@
+
 import { Heart, Mail, Phone, MapPin, MessageSquare, Shield, Lock } from "lucide-react";
 
 const Footer = () => {
@@ -35,7 +36,7 @@ const Footer = () => {
                 className="flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-xl transition-colors w-full max-w-xs"
               >
                 <MessageSquare className="w-5 h-5" />
-                <span className="font-semibold">WhatsApp: 681 930 144</span>
+                <span className="font-semibold">WhatsApp: +34 681 930 144</span>
               </button>
               
               <div className="space-y-2">
@@ -45,7 +46,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-emerald-400" />
-                  <span className="text-gray-300">900 123 456 (gratuito)</span>
+                  <span className="text-gray-300">+34 681 930 144</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-emerald-400" />

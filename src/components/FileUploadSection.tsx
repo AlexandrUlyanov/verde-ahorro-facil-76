@@ -207,7 +207,7 @@ const FileUploadSection = () => {
                     </label>
                     <Input
                       type="tel"
-                      placeholder="600 000 000"
+                      placeholder="+34 681 930 144"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       required
@@ -234,11 +234,11 @@ const FileUploadSection = () => {
                       </div>
                       <div className="flex items-center gap-2">
                         <Phone className="w-4 h-4" />
-                        <span>900 123 456 (gratuito)</span>
+                        <span>+34 681 930 144</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <MessageSquare className="w-4 h-4" />
-                        <span>WhatsApp: 681 930 144</span>
+                        <span>WhatsApp: +34 681 930 144</span>
                       </div>
                     </div>
                   </div>

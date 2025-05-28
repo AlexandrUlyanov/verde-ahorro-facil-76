@@ -88,7 +88,7 @@ const CallToAction = () => {
                   </label>
                   <Input
                     type="tel"
-                    placeholder="600 000 000"
+                    placeholder="+34 681 930 144"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     required
@@ -152,11 +152,11 @@ const CallToAction = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-emerald-200" />
-                    <span className="text-white/90">900 123 456 (gratuito)</span>
+                    <span className="text-white/90">+34 681 930 144</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <MessageSquare className="w-5 h-5 text-emerald-200" />
-                    <span className="text-white/90">WhatsApp: 681 930 144</span>
+                    <span className="text-white/90">WhatsApp: +34 681 930 144</span>
                   </div>
                 </div>
               </CardContent>
